@@ -1,0 +1,12 @@
+name: me.guillaume.minecraftYdaysB2.Main
+version: '1.0-SNAPSHOT'
+main: me.guillaume.minecraftYdaysB2.Main
+api-version: '1.21'
+commands:
+  addTeam:
+    description: Crée une équipe
+    usage: /addTeam <name>
+
+  listTeam:
+    description: Afficher les équipes
+    usage: /listTeam
