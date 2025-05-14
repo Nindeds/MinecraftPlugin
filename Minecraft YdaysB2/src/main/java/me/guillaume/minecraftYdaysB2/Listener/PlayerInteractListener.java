@@ -137,6 +137,14 @@ public class PlayerInteractListener extends ItemUtil implements Listener {
                     player.sendMessage(ChatColor.RED + "Vous êtes déjà dans l'équipe " + teamName + " !");
                     return;
                 }
+                if (playerTeam != null) {
+                    playerTeam.removeEntry(player.getName());
+                    player.sendMessage(ChatColor.YELLOW + "Tu as quitté ton équipe !");
+                    if (playerTeam.getEntries().isEmpty()) {
+                        playerTeam.unregister();
+                        player.sendMessage(ChatColor.GRAY + "L'équipe a été supprimée car elle était vide.");
+                    }
+                }
                 if (!(team == null)){
                     if(team.getEntries().size()>= 4) {
                         player.sendMessage(ChatColor.RED + "L'équipe "+ teamName + " est pleine.");

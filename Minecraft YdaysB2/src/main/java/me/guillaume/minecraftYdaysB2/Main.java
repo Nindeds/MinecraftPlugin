@@ -8,7 +8,7 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        System.out.println("Minecraft YdaysB2 is enabled!");
+        System.out.println("Minecraft YdaysB2 is enabled! LOL");
 
 
         //Listener
